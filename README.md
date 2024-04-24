@@ -4,13 +4,18 @@ Target audience: Surfers looking for a good surf beach in California! California
 
 # Installation Instructions
 
-
 Run the following commands in the terminal:
-```
+
+```         
 git clone git@github.ubc.ca:MDS-2023-24/DSCI_532_individual-assignment_smckee01.git
 cd src
 Rscript app.R
 ```
+
 Then copy paste the URL that begins in http
 
-Next, copy and paste the URL beginning in http:// to your browser to use the dashboard. 
+Next, copy and paste the URL beginning in <http://> to your browser to use the dashboard.
+
+# App Description (video)
+
+Follow the link for app desctiption and usage walk through: [https://youtu.be/cyi-fy_oNfMhttps://youtu.be/cyi-fy_oNfM](https://youtu.be/cyi-fy_oNfM){.uri}

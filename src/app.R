@@ -33,26 +33,27 @@ ui <- fluidPage(
     # Sidebar with a slider input for number of bins 
     sidebarLayout(
         sidebarPanel(
-        selectInput(inputId = "power",
+        selectInput("region",
                       selected = NULL,
-                      label = "Wave Power",
-                      choices = wave_power,
+                      label = "Region",
+                      choices = region,
                       multiple=TRUE),
-        selectInput(inputId = "quality",
-                    selected = NULL,
-                    label = "Wave Quality",
-                    choices = wave_quality,
-                    multiple=TRUE),
         selectInput("bottom",
                     selected = NULL,
                     label = "Bottom",
                     choices = bottom,
                     multiple=TRUE),
-        selectInput("region",
+        selectInput(inputId = "quality",
                     selected = NULL,
-                    label = "Region",
-                    choices = region,
+                    label = "Wave Quality",
+                    choices = wave_quality,
                     multiple=TRUE),
+        selectInput(inputId = "power",
+                      selected = NULL,
+                      label = "Wave Power",
+                      choices = wave_power,
+                      multiple=TRUE),
+        
         plotlyOutput("plot", width = "400px")
         ),
 
@@ -93,7 +94,7 @@ server <- function(input, output) {
   
   output$plot <- renderPlotly(
     plot_geo(df, locationmode = 'USA-states') |>
-      layout(width = 300, height = 400,
+      layout(width = 500, height = 400,
         geo = list(scope = 'usa', 
                         projection = list(type = 'albers usa'), 
                    center = list(lat = 37, lon = -119),
